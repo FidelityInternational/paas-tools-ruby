@@ -1,6 +1,6 @@
 FROM ruby:2.3-stretch
 
-ENV PACKAGES unzip curl ca-certificates git musl uuid-runtime jq zip vim
+ENV PACKAGES unzip curl openssl ca-certificates git jq musl util-linux gzip bash uuid-runtime coreutils vim tzdata openssh-client gnupg rsync make zip
 RUN apt-get update \
       && apt-get -y upgrade \
       && apt-get install -y --no-install-recommends $PACKAGES \

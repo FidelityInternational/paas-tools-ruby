@@ -1,2 +1,2 @@
-# cf-tools-ruby
-Debian based container with ruby installed and cf-cli
+# paas-tools-ruby
+Debian (stretch) based container with various tools installed and ruby 2.3
