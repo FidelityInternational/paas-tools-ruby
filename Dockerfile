@@ -10,6 +10,6 @@ RUN apt-get update \
       && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 RUN curl -L "https://s3-us-west-1.amazonaws.com/cf-cli-releases/releases/v${CF_CLI_VERSION}/cf-cli_${CF_CLI_VERSION}_linux_x86-64.tgz" | tar -zx -C /usr/local/bin
 RUN curl -L "https://github.com/mikefarah/yq/releases/download/${YQ_VERSION}/yq_linux_amd64" -o /usr/local/bin/yq && chmod +x /usr/local/bin/yq
-RUN curl -L "https://github.com/concourse/concourse/releases/download/v${FLY_VERSION}/fly-${FLY_VERSION}-linux-amd64.tgz" -o /usr/local/bin/fly && chmod +x /usr/local/bin/fly
+RUN curl -L "https://github.com/concourse/concourse/releases/download/v${FLY_VERSION}/fly-${FLY_VERSION}-linux-amd64.tgz" | tar -zx -C /usr/local/bin
 RUN ln -s /usr/local/bin/yq /usr/local/bin/yaml
 RUN gem install cf-uaac
