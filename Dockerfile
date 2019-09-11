@@ -13,3 +13,4 @@ RUN curl -L "https://github.com/mikefarah/yq/releases/download/${YQ_VERSION}/yq_
 RUN curl -L "https://github.com/concourse/concourse/releases/download/v${FLY_VERSION}/fly-${FLY_VERSION}-linux-amd64.tgz" | tar -zx -C /usr/local/bin
 RUN ln -s /usr/local/bin/yq /usr/local/bin/yaml
 RUN gem install cf-uaac
+RUN gem install bundler -v 2.0.2
