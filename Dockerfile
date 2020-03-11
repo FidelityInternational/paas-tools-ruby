@@ -1,8 +1,8 @@
-FROM ruby:2.5-stretch
-ENV YQ_VERSION="2.4.0"
-ENV CF_CLI_VERSION="6.45.0"
+FROM ruby:2.5-buster
+ENV YQ_VERSION="3.2.1"
+ENV CF_CLI_VERSION="6.50.0"
 ENV FLY_VERSION="5.7.0"
-ENV PACKAGES unzip curl openssl ca-certificates git jq musl util-linux gzip bash uuid-runtime coreutils vim tzdata openssh-client gnupg rsync make zip
+ENV PACKAGES awscli unzip curl openssl ca-certificates git jq musl util-linux gzip bash uuid-runtime coreutils vim tzdata openssh-client gnupg rsync make zip
 RUN apt-get update \
       && apt-get -y upgrade \
       && apt-get install -y --no-install-recommends $PACKAGES \
