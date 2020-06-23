@@ -1,4 +1,4 @@
-FROM ruby:2.5-buster
+FROM ruby:2.7-buster
 ENV YQ_VERSION="3.2.1"
 ENV CF_CLI_VERSION="6.49.0"
 ENV FLY_VERSION="5.7.0"
