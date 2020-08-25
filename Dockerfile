@@ -7,7 +7,7 @@ ENV YQ_VERSION="3.2.1"
 ENV CF_CLI_VERSION="6.49.0"
 ENV FLY_VERSION="5.8.1"
 ENV BOSH_VERSION="6.2.1"
-ENV PACKAGES "awscli unzip curl openssl ca-certificates git jq musl util-linux gzip bash uuid-runtime coreutils vim tzdata openssh-client gnupg rsync make zip build-essential zlibc zlib1g-dev ruby-dev libxslt-dev libxml2-dev libssl-dev libreadline-dev libyaml-dev"
+ENV PACKAGES "awscli unzip curl openssl ca-certificates git jq musl util-linux gzip bash uuid-runtime coreutils vim tzdata openssh-client gnupg rsync make zip build-essential zlibc zlib1g-dev ruby-dev libxslt-dev libxml2-dev libssl-dev libreadline-dev libyaml-dev libcurl4-openssl-dev"
 RUN apt-get update \
       && apt-get -y upgrade \
       && apt-get install -y --no-install-recommends $PACKAGES \
