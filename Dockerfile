@@ -6,7 +6,7 @@ ARG DEBIAN_FRONTEND=noninteractive
 ENV YQ_VERSION="4.9.6"
 ENV CF_CLI_VERSION="7.2.0"
 ENV FLY_VERSION="7.2.0"
-ENV BOSH_VERSION="6.4.1"
+ENV BOSH_VERSION="6.4.4"
 ENV PACKAGES "awscli unzip curl openssl ca-certificates git jq musl util-linux gzip bash uuid-runtime coreutils vim tzdata openssh-client gnupg rsync make zip build-essential zlibc zlib1g-dev ruby-dev libxslt-dev libxml2-dev libssl-dev libreadline-dev libyaml-dev libcurl4-openssl-dev"
 RUN apt-get update \
       && apt-get -y upgrade \
