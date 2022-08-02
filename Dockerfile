@@ -3,7 +3,7 @@ FROM ruby:3.1.2-bullseye
 ## Have to use this due to default interactive tzdata config
 ARG DEBIAN_FRONTEND=noninteractive
 
-ENV YQ_VERSION="4.9.6"
+ENV YQ_VERSION="4.26.1"
 ENV CF_CLI_VERSION="7.5.0"
 ENV FLY_VERSION="7.7.1"
 ENV BOSH_VERSION="7.0.1"
