@@ -1,12 +1,12 @@
-FROM ruby:3.1.2-bullseye
+FROM ruby:3.1.4-bullseye
 
 ## Have to use this due to default interactive tzdata config
 ARG DEBIAN_FRONTEND=noninteractive
 
 ENV YQ_VERSION="4.26.1"
-ENV CF_CLI_VERSION="8.6.1"
-ENV FLY_VERSION="7.9.1"
-ENV BOSH_VERSION="7.0.1"
+ENV CF_CLI_VERSION="8.7.7"
+ENV FLY_VERSION="7.11.2"
+ENV BOSH_VERSION="7.5.2"
 ENV PACKAGES "awscli unzip curl openssl ca-certificates git jq musl util-linux gzip bash uuid-runtime coreutils vim tzdata openssh-client gnupg rsync make zip build-essential zlib1g-dev ruby-dev libxslt-dev libxml2-dev libssl-dev libreadline-dev libyaml-dev libcurl4-openssl-dev"
 RUN apt-get update \
       && apt-get -y upgrade \
