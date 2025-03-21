@@ -1,4 +1,4 @@
-FROM ruby:3.2.7-bookworm
+FROM ruby:3.3.0-bookworm
 
 ## Have to use this due to default interactive tzdata config
 ARG DEBIAN_FRONTEND=noninteractive
@@ -18,4 +18,4 @@ RUN curl -fL "https://github.com/cloudfoundry/bosh-cli/releases/download/v${BOSH
 RUN curl -fL "https://github.com/mikefarah/yq/releases/download/v${YQ_VERSION}/yq_linux_amd64" -o /usr/local/bin/yq && chmod +x /usr/local/bin/yq
 RUN curl -fL "https://github.com/concourse/concourse/releases/download/v${FLY_VERSION}/fly-${FLY_VERSION}-linux-amd64.tgz" | tar -zx -C /usr/local/bin
 RUN gem install cf-uaac
-RUN gem install bundler -v 2.3.16
+RUN gem install bundler -v 2.5.21
