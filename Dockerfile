@@ -4,9 +4,9 @@ FROM ruby:3.3.0-bookworm
 ARG DEBIAN_FRONTEND=noninteractive
 
 ENV YQ_VERSION="4.26.1"
-ENV CF_CLI_VERSION="8.9.0"
-ENV FLY_VERSION="7.12.1"
-ENV BOSH_VERSION="7.8.6"
+ENV CF_CLI_VERSION="8.13.0"
+ENV FLY_VERSION="7.13.1"
+ENV BOSH_VERSION="7.9.5"
 ENV PACKAGES "awscli unzip curl openssl ca-certificates git jq musl util-linux gzip bash uuid-runtime coreutils vim tzdata openssh-client gnupg rsync make zip build-essential zlib1g-dev ruby-dev libxslt-dev libxml2-dev libssl-dev libreadline-dev libyaml-dev libcurl4-openssl-dev"
 RUN apt-get update \
       && apt-get -y upgrade \
