@@ -1,4 +1,4 @@
-FROM ruby:3.3.0-bookworm
+FROM ruby:3.3-bookworm
 
 ## Have to use this due to default interactive tzdata config
 ARG DEBIAN_FRONTEND=noninteractive
@@ -7,7 +7,7 @@ ENV YQ_VERSION="4.26.1"
 ENV CF_CLI_VERSION="8.14.1"
 ENV FLY_VERSION="7.13.2"
 ENV BOSH_VERSION="7.9.7"
-ENV CREDHUB_VERSION="2.9.46"
+ENV CREDHUB_VERSION="2.9.47"
 ENV PACKAGES "awscli unzip curl openssl ca-certificates git jq musl util-linux gzip bash uuid-runtime coreutils vim tzdata openssh-client gnupg rsync make zip build-essential zlib1g-dev ruby-dev libxslt-dev libxml2-dev libssl-dev libreadline-dev libyaml-dev libcurl4-openssl-dev xxd"
 RUN apt-get update \
       && apt-get -y upgrade \
